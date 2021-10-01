@@ -322,10 +322,10 @@ $(document).on('click', '.timeSlot', function(e){
 
 // reload when button to email is clicked
 $(document).on('click', '.ohnoel', function(){
-    reset(true)
+
 })
 
-// reload when button to email is clicked
+// reload when redo is clicked
 $(document).on('click', '.redo', function(){
-    
+    reset(false)
 })
