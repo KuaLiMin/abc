@@ -306,7 +306,7 @@ $(document).on('click', '.timeSlot', function(e){
         $(".action").append(`<div class="col-12 payment min-vh-100 mb-5 d-flex flex-wrap justify-content-center"> 
         <div class="col-sm-8 col-12 align-self-sm-center">
             <h1 class="almost" style="font-family: 'Allison', cursive;font-size: 90px;">Almost Done!<span class="ml-3 ml-lg-4 smileBlack" style="color: var(--clrStrong);font-size:60px; line-height:10px">☺</span></h1>
-            <p>Click the button below after completing payment of <b>`+PRICE+` SGD</b> via PayNow QR code for your <b>`+BOOK+`</b> time slot.<br><u>It will open your email client, please attach your proof of payment and click send.</u> We will email you once booking is confirmed.</p>
+            <p>Click the button below after completing payment of <b>`+PRICE+` SGD</b> via PayNow QR code for your <b>`+BOOK+`</b> time slot.<br> Do make sure your device has a <u>default email client set</u> for this to work. Please attach proof of payment before sending the email, we will email you once booking is confirmed.</p>
             <div class="col-12 d-flex mb-sm-0 my-4 justify-content-center">
             <button class="col-sm-9 col-11 py-1 px-0 ohnoel buttonStrong" onclick="window.onbeforeunload = function (e) {return};parent.location='`+mailto+`'">Finish Booking <span class="txtButtonSmall">(opens email client)</span></button>
             </div>
@@ -322,10 +322,10 @@ $(document).on('click', '.timeSlot', function(e){
 
 // reload when button to email is clicked
 $(document).on('click', '.ohnoel', function(){
-
+    reset(true)
 })
 
-// reload when redo is clicked
+// reload when button to email is clicked
 $(document).on('click', '.redo', function(){
     reset(false)
 })
