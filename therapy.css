@@ -1,0 +1,46 @@
+.head{
+    font-weight: 700;
+}
+
+.redo{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.form-group{
+    margin-bottom: 50px;
+}
+
+.smile:hover{
+    cursor:default;
+}
+
+#formMatch, .result{
+    background-image: url('media/bg/blush.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% 100%;
+}
+
+@media only screen and (max-width: 1046px) and (min-width:991px) {
+    .smileBlack{
+        font-size: 30px !important;
+    }
+}
+@media only screen and (max-width:768px) {
+    .almost, .smileBlack{
+        font-size: 60px !important;
+    }
+    .payment{
+        min-height:auto !important;
+    }
+}
+@media only screen and (max-width:400px) {
+    .almost, .smileBlack{
+        font-size: 50px !important;
+    }
+    .payment{
+        min-height:auto !important;
+    }
+}

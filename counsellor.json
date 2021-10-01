@@ -1,0 +1,101 @@
+{
+    "4426131122": {
+        "name": "Kenneth",
+        "gender": "m",
+        "credentials": ["Executive Counselling and Training Academy (Cohort 2017)", "Grad Dip in Social Science (Professional Counselling)", "Grad Cert in Social Science (Professional Counselling)"],
+        "techniques": "Transactional Analysis (TA) Reality Therapy, (Structural) Family Therapy",
+        "areaOfFocus": "Youth, young adult, newly weds, family with teenagers",
+        "photo": "media/images/prof/i3hh35y.jpg",
+        "cost" : 75,
+        "mode" : "",
+        "availability": {
+            "mon": ["10:30:00",
+                    "12:30:00",
+                    "13:30:00",
+                    "14:30:00",
+                    "15:30:00",
+                    "16:30:00"],
+            "tue": ["15:30:00"],
+            "wed": ["16:30:00"],
+            "thu": [],
+            "fri": ["15:30:00",
+                    "16:00:00"],
+            "sat": ["16:30:00"],
+            "sun": ["15:30:00"]
+        }
+    },
+    "5796563296": {
+        "name": "Leon",
+        "gender": "m",
+        "credentials": ["Masters in Professional Counselling (Advanced)", "Diploma in Social Science and Counselling"],
+        "techniques": "Adopts person centred style active listening, motivational interviewing, solutions focused questioning to facilitate finding the best course of action for simple daily as well as big and deeply desired life goals with you. Transactional Analysis-Analyzing/checking your internal and external impactful communications from the past until present and possible “negative scripts” (beliefs) that may have caused your unproductive negative thoughts consciously or subconsciously.<br><br>Leon believes that by being in tune to our true desired quality world and being a congruent person, we will naturally be uplifted , re-navigate our behaviours, taking productive actions and seize back control of our truest self-leadership potential. This then empowers us to navigate and journey our life with higher awareness and hope. Therefore, however challenging, we will know we lived optimally to our truest best to achieve optimal living.",
+        "areaOfFocus": "Career and stress management and communications issues",
+        "photo": "media/images/prof/o39h.jpg",
+        "cost" : 115,
+        "mode" : "(Video)",
+        "availability": {
+            "mon": ["12:30:00",
+                    "12:30:00",
+                    "13:30:00",
+                    "14:30:00",
+                    "15:30:00",
+                    "16:30:00"],
+            "tue": ["15:30:00"],
+            "wed": ["16:30:00"],
+            "thu": ["14:30:00"],
+            "fri": ["15:30:00"],
+            "sat": ["16:30:00"],
+            "sun": ["15:30:00"]
+        }
+    },
+    "9939916331": {
+        "name": "Glenda",
+        "above23": true,
+        "gender" : "f",
+        "credentials": ["Bachelor of Psychology", "Master of Counselling"],
+        "techniques": "Skilled and trained in narrative therapy, cognitive behavioural therapy, solution-focused brief therapy and existential therapy. I'm trained in grief recovery method as well. At times, I would employ Adlerian therapy as well to understand more about clients' family-of-origin if it is helpful. <br><br>In her professional life, she has worked with a range of clients including youth and elderly. She is particularly humbled by the various experiences in journeying with her past clients as she learnt a lot from them too. During her personal time, she can be reading her favourite novels, spending time with her family, listening to Kpop, doing kickboxing. She tend to prioritise self-care by doing calligraphy or just watching her favourite dramas. She loves her quiet moments as well and she volunteers by working with pre-school children during her weekends.",
+        "areaOfFocus": "Career and stress management and communications issues",
+        "photo": "",
+        "cost" : 80,
+        "mode" : "(Audio)",
+        "availability": {
+            "mon": ["13:30:00",
+                    "12:30:00",
+                    "13:30:00",
+                    "14:30:00",
+                    "15:30:00",
+                    "16:30:00"],
+            "tue": ["15:30:00"],
+            "wed": ["16:30:00"],
+            "thu": ["14:30:00"],
+            "fri": ["15:30:00"],
+            "sat": ["16:30:00"],
+            "sun": ["15:30:00"]
+        }    
+    },
+    "9613946429": {
+        "name": "Serene",
+        "above23": false,
+        "gender": "f",
+        "credentials": ["CTRT & Lead Management (2019) Transactional Analysis 101 and 202 (2019 & 2020)", "Masters in Counselling with ECTA-Swinburne University (2019)", "Graduate Diploma in Counselling with ECTA-Swinburne University (2018)", "Graduate Certificate in Counselling with ECTA-Swinburne University (2017)", "Advanced Diploma in Psychology with MDIS (2016)", "Diploma in Psychology with MDIS 2015"],
+        "techniques": "CBT, Choice Therapy or Transactional Analysis.",
+        "areaOfFocus": "Women who have been Abused (Emotions, mental, physical). Low self-esteem and confidence (Children or young adults). Relationships.",
+        "photo": "media/images/prof/w343h3.jpg",
+        "cost" : 75,
+        "mode" : "(Video)",
+        "availability": {
+            "mon": ["14:30:00",
+                    "12:30:00",
+                    "13:30:00",
+                    "14:30:00",
+                    "15:30:00",
+                    "16:30:00"],
+            "tue": ["10:30:00"],
+            "wed": ["16:30:00"],
+            "thu": ["14:30:00"],
+            "fri": ["15:30:00"],
+            "sat": ["16:30:00"],
+            "sun": ["15:30:00"]
+        }
+    }
+}

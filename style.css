@@ -1,0 +1,163 @@
+/*variables*/
+:root {
+    --clrBg: #FFF; /*White*/
+    --clrBgOpp: #000; /*Black*/
+    --clrBgAccent: #C4F3F3; /*Diamond*/
+    --clrStrong: #FFCE4C; /*Maize*/
+    --clrStrongFocus: #F99C15; /*Dark Tangerine*/
+    --clrBgAccentMute: #D9D9D9; /*Light Silver*/
+    --clrBgAccentLoud: #6E6C80; /*Old Lavender*/
+}
+
+/* harder to download images*/
+img {
+    pointer-events: none;
+}
+
+/*default*/
+body{
+    background-color: var(--clrBg);
+    color: var(--clrBgOpp);
+}
+
+body, span{
+    color: var(--clrBgOpp);
+	font-family: 'Nunito', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+/*remove focus outline*/
+button, .btn, button:focus, .btn:focus, textarea:focus, audio:focus, .coolKey:focus{
+	outline: none !important; 
+	border: 0px solid transparent;
+	box-shadow: none !important;
+}
+
+/*remove hyperlink formatting*/
+a, a:focus, a:hover{
+    text-decoration: none;
+    color: var(--clrBgOpp);
+}
+
+/*lists*/
+ul {
+    margin: 0;
+  }
+  ul.dashed {
+    list-style-type: none;
+  }
+  ul.dashed > li {
+    text-indent: -5px;
+  }
+  ul.dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+  }
+
+
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--clrBgAccentMute) 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--clrStrong) 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--clrStrongFocus) 
+  }
+
+
+
+
+
+/*nav*/
+nav{
+    border-bottom: 1px solid var(--clrBgAccent);
+}
+
+.navDrop{
+    border: 0px;
+    background-color: var(--clrBg);
+}
+
+.nav-link, .nameLogo>span, .construction{
+    font-family: 'Montserrat Alternates', sans-serif;
+    letter-spacing: 0.35mm
+}
+
+.nav-link, .construction{
+    font-weight: bolder;
+    font-size:x-large;
+}
+
+.navbar .navbar-nav .nav-link, .navbar .navbar-nav .nav-link:focus{
+    color: var(--clrBgAccentLoud);
+}
+
+.navbar .navbar-nav .nav-link.active,.navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.show{
+    color: var(--clrBgOpp);
+}
+
+
+.nav-link:hover{
+    background-color: var(--clrBg);
+}
+
+
+/*other text*/
+.source, .txtButtonSmall{
+    font-size: 8px;
+}
+
+.source{
+    color: var(--clrBgAccentMute);
+}
+
+
+/*buttons*/
+.buttonStrong, .buttonStill{
+    font-size: 26px;
+    font-family: 'Gaegu', cursive;
+    background-color: var(--clrStrong);
+    color: var(--clrBgOpp);
+}
+.buttonStrong:hover, .buttonStrong:hover>span{
+    background-color: var(--clrStrongFocus);
+    color: var(--clrBg);
+}
+
+
+/*Screens 1060px and below*/
+@media only screen and (max-width: 1060px) {
+    body,.warning{
+        font-size: 10px;
+    }
+}
+
+/*Screens 590px and below*/
+@media only screen and (max-width: 590px) {
+    .nav-link, .buttonStrong, .construction{
+        font-size: 19px;
+    }
+}
+
+/*Screens 325px and below*/
+@media only screen and (max-width: 325px) {
+    .warning{
+        font-size: 8px;
+    }
+    body, .buttonStrong{
+        font-size: 12px;
+    }
+}
