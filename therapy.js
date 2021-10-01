@@ -252,10 +252,15 @@ function displayAvailability(availability) {
         dayTimes = availability[day]
 
         if (dayTimes.length > 0) {
-            weekString += '<h5 class="mt-5"><b>' + day.charAt(0).toUpperCase() + day.slice(1)+ ", " + date.getDate() + " " + months[date.getMonth()] + " " + (date.getFullYear()).toString().substr(-2) + '</b></h5><div class="d-flex flex-wrap justify-content-start mb-5">'
+            dayString = '<h5 class="mt-5"><b>' + day.charAt(0).toUpperCase() + day.slice(1)+ ", " + date.getDate() + " " + months[date.getMonth()] + " " + (date.getFullYear()).toString().substr(-2) + '</b></h5><div class="d-flex flex-wrap justify-content-start mb-5">'
+            theFirst = true
             Object.keys(dayTimes).forEach(fullTank => {
                 idgiveittoyou = dayTimes[fullTank]
                 if(i!=0 || iftherewereanymoreleftofme < idgiveittoyou){
+                    if(theFirst){
+                        weekString += dayString
+                    }
+                    theFirst = false
                     weekString += '<button class="col-sm-3 col-lg-2 col-4 mt-3 pr-1 mr-sm-5 mr-3 buttonStrong timeSlot">'+idgiveittoyou.slice(0, -3)+'</button>'
                 }
 
