@@ -1,6 +1,14 @@
 swallowTheKey = '4C6268276572206775722062617220756E6F76672056207768666720706E61276720787670780A4C6268276572206775722062617220756E6F76672056207768666720706E61276720787670780A4C6268276572206775722062617220756E6F76672056207768666720706E61276720787670780A4C6268276572206775722062617220756E6F76672056207768666720706E6127672078767078'
 
-alert("Some features of this page aren't available/do not work properly on mobile devices, switch to desktop for a better experience.")
+
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    alert("Some features of the therapy page aren't available/do not work properly on mobile devices, switch to desktop for a better experience.")
+}
+
+
+
 
 
 checkJSON(false)
