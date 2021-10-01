@@ -339,8 +339,8 @@ $(document).on('click', '.timeSlot', function(e){
 // reload when button to email is clicked
 $(document).on('click', '.ohnoel', function(){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        $(".main").empty()
-        $(".main").append(`<p class="col-12 p-0 text-center">Reload once email has been sent.</p>`)
+        $("main").empty()
+        $("main").append(`<p class="col-12 p-0 text-center">Reload once email has been sent.</p>`)
     }else{
     reset(true)
     }
