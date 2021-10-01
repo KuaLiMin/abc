@@ -147,7 +147,7 @@ nav{
 
 /*Screens 590px and below*/
 @media only screen and (max-width: 590px) {
-    .nav-link, .buttonStrong, .construction{
+    .nav-link, .buttonStrong, .construction, .buttonStill{
         font-size: 19px;
     }
 }
@@ -157,7 +157,7 @@ nav{
     .warning{
         font-size: 8px;
     }
-    body, .buttonStrong{
+    body, .buttonStrong, .buttonStill{
         font-size: 12px;
     }
 }
