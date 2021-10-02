@@ -126,7 +126,7 @@ $( "#concernOther" ).css("display", "none")
 // operate dropdown
 $( "#concern" ).change(function() {
     if(this.value == "other"){
-        $( '<input id="concernOther" placeholder="Please Specify" name="other" class="mt-3 form-control" type="text" required="required">' ).insertAfter(this)
+        $( '<input id="concernOther" placeholder="Please Specify" name="other" autocomplete="off" class="mt-3 form-control" type="text" required="required">' ).insertAfter(this)
         $('#concernOther').focus()
     }
     else{
