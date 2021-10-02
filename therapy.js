@@ -2,11 +2,10 @@ swallowTheKey = '4C6268276572206775722062617220756E6F76672056207768666720706E612
 
 
 
-
+// alert for mobile phones
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     alert("Some features of the therapy page aren't available/do not work properly on mobile devices, switch to desktop for a better experience.")
 }
-
 
 
 
@@ -95,7 +94,6 @@ function checkSess(){
 
 // reset page
 function reset(allgasnobreaks){
-        console.log("abc")
     if(allgasnobreaks){
         window.onbeforeunload = function (e) {return}
         $(window).scrollTop(0);
@@ -175,7 +173,7 @@ function displayManiatch(maniatch){
         }
     }
     $(".result").remove()
-    $(".action").append('<div class="col-12 result p-sm-4 px-1 py-4"><h1 class="text-center smile" style="color: var(--clrStrongFocus); font-size:60px; filter: drop-shadow(0px 0px 0.5px rgb(49, 48, 48));">☺</h1><h3 class="head text-center">We Matched You!</h3><br><img class="mx-auto d-block border-white px-1 col-7 my-3 col-sm-3" style="border-top:solid 3px; border-bottom:solid 3px" src="'+maniatch["photo"]+'"> <h1 class="head mb-4 text-center matchName">'+ maniatch["name"] +'</h1><p class="text-center">Cost: $' + maniatch["cost"] +' per 1 hour sesssion '+ maniatch["mode"] +'</p> <section><b>Credentials</b><p>'+ credentials +'</p> </section> <section> <b>Counselling Techniques</b> <p>'+maniatch["techniques"]+'</p> </section> <section> <b>Area of Focus</b> <p>'+ maniatch["areaOfFocus"] +'</p> </section class="mb-2"> <button id="redoMatch" class="bg-transparent col-1 redo p-0 mt-3 mt-sm-4 mr-3 mr-sm-4" data-toggle="tooltip" data-placement="top" title="Restart Matching"> <img class="d-block p-0 p-sm-1 p-lg-3 col-12" src="media/icon/redo.png"> </button> <div class="col-12 d-flex my-4 justify-content-center"> <button class="col-8 mt-5 p-0 avail buttonStrong">See Availability</button> </div> </div>')
+    $(".action").append('<div class="col-12 result p-sm-4 px-1 py-4"><h1 class="text-center smile" style="color: var(--clrStrongFocus); font-size:60px; filter: drop-shadow(0px 0px 0.5px rgb(49, 48, 48));">☺</h1><h3 class="head text-center">We Matched You!</h3><br><img class="mx-auto d-block border-white px-1 col-7 my-3 col-sm-3" style="border-top:solid 3px; border-bottom:solid 3px" src="'+maniatch["photo"]+'"> <h1 class="head mb-4 text-center matchName">'+ maniatch["name"] +'</h1><p class="text-center">Cost: $' + maniatch["cost"] +' per 1 hour sesssion '+ maniatch["mode"] +'</p> <section><b>Credentials</b><p>'+ credentials +'</p> </section> <section> <b>Counselling Techniques</b> <p>'+maniatch["techniques"]+'</p> </section> <section> <b>Area of Focus</b> <p>'+ maniatch["areaOfFocus"] +'</p> </section class="mb-2"> <button id="redoMatch" class="bg-transparent col-1 redo p-0 mt-3 mt-sm-4 mr-3 mr-sm-4" data-toggle="tooltip" data-placement="top" title="Restart Matching"> <img class="d-block p-0 p-sm-1 p-lg-3 col-12" src="media/icon/redo.svg"> </button> <div class="col-12 d-flex my-4 justify-content-center"> <button class="col-8 mt-5 p-0 avail buttonStrong">See Availability</button> </div> </div>')
     $('[data-toggle="tooltip"]').tooltip()
     $('html, body').animate({
         scrollTop: $("#redoMatch").offset().top
@@ -210,7 +208,6 @@ function handleAnswers(answers){
 
 // submitted form
 $("#formMatch").submit(function(e){
-    console.log("asa")
     e.preventDefault();
 
     if($('#checkbox1').is(":checked") && $('#checkbox2').is(":checked")){
@@ -269,7 +266,7 @@ function displayAvailability(availability) {
         }
     }
     $(".booking").remove()
-    $(".action").append('<div class="col-12 booking my-5 py-4"><h1 class="text-center col-12 my-4 head">Booking</h1><p class="col-12 p-0 text-center">All dates and timings are in Singapore Time (SGT). Timings are subject to change, we will inform you after booking if there has been a change in schedule. Click on the timing you\'d like to book. :)</p><button id = "redoTimings" class="bg-transparent col-1 redo p-0 mr-3" style="margin-top:2.3em;" data-toggle="tooltip" data-placement="top" title="Restart Matching"><img class="d-block p-0 p-sm-1 p-lg-3 col-12" src="media/icon/redo.png"></button>'+weekString+'</div>')
+    $(".action").append('<div class="col-12 booking my-5 py-4"><h1 class="text-center col-12 my-4 head">Booking</h1><p class="col-12 p-0 text-center">All dates and timings are in Singapore Time (SGT), sessions are an hour long. Timings are subject to change, we will inform you after booking if there has been a change in schedule. Click on the timing you\'d like to book. :)</p><button id = "redoTimings" class="bg-transparent col-1 redo p-0 mr-3" style="margin-top:2.3em;" data-toggle="tooltip" data-placement="top" title="Restart Matching"><img class="d-block p-0 p-sm-1 p-lg-3 col-12" src="media/icon/redo.png"></button>'+weekString+'</div>')
     $('[data-toggle="tooltip"]').tooltip()
     $('html, body').animate({
         scrollTop: $("#redoTimings").offset().top
@@ -312,7 +309,7 @@ $(document).on('click', '.timeSlot', function(e){
     
 
     
-        mailto = "mailto:xxiiaaoolloonnggbbaaoo@gmail.com?subject=BookinTherapyg&body=%23%20PLEASE%20ATTACH%20PROOF%20OF%20PAYMENT%20AND%20CLICK%20SEND%2C%20THANK%20YOU%20%23%0D%0A%0D%0AAdditional%20comments%3A%20%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%23%20DO%20NOT%20MODIFY%20ANYTHING%20BELOW%20THIS%20LINE%20%23%0D%0A%0D%0A%0D%0A%0D%0A%0D%0Aname%20%3D%20"
+        mailto = "mailto:ventingspaces@gmail.com?subject=BookinTherapyg&body=%23%20PLEASE%20ATTACH%20PROOF%20OF%20PAYMENT%20AND%20CLICK%20SEND%2C%20THANK%20YOU%20%23%0D%0A%0D%0AAdditional%20comments%3A%20%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%23%20DO%20NOT%20MODIFY%20ANYTHING%20BELOW%20THIS%20LINE%20%23%0D%0A%0D%0A%0D%0A%0D%0A%0D%0Aname%20%3D%20"
                     + escape(NAME) + "%0D%0Aage%20%3D%20"+ escape(AGE) +"%0D%0AprefGen%20%3D%20"
                     + escape(GENDER) + "%0D%0Aconcern%20%3D%20" + escape(CONCERN) + "%0D%0Abudget%20%3D%20"
                     + escape(BUDGET) +"%0D%0Amatch%20%3D%20"+ escape(MATCH)+"%0D%0Aprice%20%3D%20"

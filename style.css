@@ -91,12 +91,12 @@ nav{
     background-color: var(--clrBg);
 }
 
-.nav-link, .nameLogo>span, .construction{
+.nav-link, .nameLogo>span, .dangerous{
     font-family: 'Montserrat Alternates', sans-serif;
     letter-spacing: 0.35mm
 }
 
-.nav-link, .construction{
+.nav-link, .dangerous{
     font-weight: bolder;
     font-size:x-large;
 }
@@ -147,7 +147,7 @@ nav{
 
 /*Screens 590px and below*/
 @media only screen and (max-width: 590px) {
-    .nav-link, .buttonStrong, .construction, .buttonStill{
+    .nav-link, .buttonStrong, .dangerous, .buttonStill{
         font-size: 19px;
     }
 }

@@ -1,0 +1,31 @@
+.accordion .d-block {
+  position: relative;
+  -webkit-flex-direction: row;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid var(--clrBgAccent);
+}
+
+.accordion .d-block:hover {
+  cursor: pointer;
+  color: var(--clrStrong);
+}
+
+a.text-center.d-block{
+    color: var(--clrBgOpp)
+}
+
+a.text-center.d-block.active {
+  border-bottom: 1px solid var(--clrStrong);
+  color: var(--clrStrong);
+}
+
+.accordion .content {
+  display: none;
+  padding: 1rem;
+  border-bottom: 1px solid var(--clrBgAccent);
+  overflow: hidden;
+}

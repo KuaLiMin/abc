@@ -7,3 +7,58 @@
 .collage{
     height: 350px;
 }
+
+.downArrow {
+    -webkit-animation: mover 3s infinite  alternate;
+    animation: mover 3s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40px); }
+}
+
+
+/*reviews (messy)*/
+.right .date { 
+    font-size: smaller;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--clrBgAccent)
+}
+
+.clientName{
+    font-size: xx-large;
+    font-family: 'Allison', cursive;
+    color: var(--clrBgAccentLoud)
+}
+
+.right{
+    border-left: 5px solid var(--clrStrongFocus)
+}
+
+.left .date { 
+    font-size: smaller;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--clrBgAccentMute)
+}
+
+.left .clientName{
+    color: var(--clrStrongFocus);
+    float:right;
+}
+
+.left{
+    border-right: 5px solid var(--clrBgAccentLoud)
+}
+
+.aReview{
+    opacity: 0;
+    margin-top: 15vh;
+}
