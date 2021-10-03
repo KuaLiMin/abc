@@ -112,6 +112,7 @@ nav{
 
 .nav-link:hover{
     background-color: var(--clrBg);
+    color: var(--clrStrong) !important;
 }
 
 

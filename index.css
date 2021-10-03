@@ -8,7 +8,7 @@
     height: 350px;
 }
 
-.downArrow {
+#downArrow {
     -webkit-animation: mover 3s infinite  alternate;
     animation: mover 3s infinite  alternate;
 }
@@ -29,12 +29,6 @@
     top: 0;
     right: 0;
     color: var(--clrBgAccent)
-}
-
-.clientName{
-    font-size: xx-large;
-    font-family: 'Allison', cursive;
-    color: var(--clrBgAccentLoud)
 }
 
 .right{
@@ -61,4 +55,15 @@
 .aReview{
     opacity: 0;
     margin-top: 15vh;
+}
+
+.aReview>*{
+    padding:  0px;
+}
+
+.clientName{
+    font-size: xx-large;
+    padding-right: 10px;
+    font-family: 'Allison', cursive;
+    color: var(--clrBgAccentLoud)
 }

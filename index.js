@@ -39,6 +39,14 @@ let nums = new Set();
   }
 }
 
+// reload when button to email is clicked
+$(document).on('click', '#downArrow', function(){
+  console.log('a')
+  $('html, body').animate({
+    scrollTop: $("#downArrow").offset().top
+}, 500);
+})
+
 //change collage
 const interval = setInterval(function() {
   collage()

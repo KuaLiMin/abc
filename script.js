@@ -1,4 +1,4 @@
-numColour = 2
+numColour = 3
 
 /*localstorage check*/
 lsCheck()
@@ -11,6 +11,7 @@ function lsCheck() {
         if (!(/^\d+$/.test(theme) && theme.length > 0)) {
             localStorage.theme = 0
         } else {
+            addTop();
             changecolour(false);
         }
     }
@@ -21,7 +22,7 @@ function lsCheck() {
 sessionStorage.clear()
 
 /*adding top section*/
-addTop();
+
 
 function addTop() {
     /*check for main*/
@@ -78,12 +79,11 @@ $(document).on('click', '.theLogo', function(e){
 
 function changecolour(reallyDude){
     if(reallyDude){
+        console.log(Math.floor(Math.random() * numColour))
         localStorage.theme = Math.floor(Math.random() * numColour)
     }
-
-    if(localStorage.theme == 1){ /* dark mode*/
+    if(localStorage.theme == '1'){ /* dark mode*/
         ivebeencheckingmyList=['#000', '#FFF' , '#C4F3F3', '#F99C15', '#FFCE4C', '#6E6C80', '#D9D9D9']
-        $('label, .readyToGo, .inResult').attr('style','-webkit-filter: invert(100%);filter: invert(100%);');
         $("<style>")
             .prop("type", "text/css")
             .html("\
@@ -95,13 +95,40 @@ function changecolour(reallyDude){
                 -webkit-filter: invert(100%);\
                 filter: invert(100%);\
             }\
+            .aSVG {\
+                filter: invert(81%) sepia(9%) saturate(965%) hue-rotate(281deg) brightness(100%) contrast(93%);;\
+            }\
             ")
             .appendTo("head")
-            }
+            setColours(ivebeencheckingmyList, reallyDude)
+    }
+    else if(localStorage.theme == '2'){ /* dark mode*/
+        ivebeencheckingmyList=['#140226', '#f5bcda' , '#f2e8a5', '#474585', '#5337b8', '#6E6C80', '#827a58']
+        $("<style>")
+            .prop("type", "text/css")
+            .html("\
+            #formMatch, .result {\
+                filter: invert(90%) hue-rotate(80deg) contrast(150%)\
+            }\
+            label, .readyToGo, .inResult {\
+                filter: invert(90%) hue-rotate(-80deg);\
+            }\
+            .aSVG {\
+                filter: invert(81%) sepia(9%) saturate(965%) hue-rotate(281deg) brightness(100%) contrast(93%);\
+            }\
+            ")
+            .appendTo("head")
+            setColours(ivebeencheckingmyList, reallyDude)
+    }
     else{
         ivebeencheckingmyList=['#FFF', '#000' , '#C4F3F3', '#FFCE4C', '#F99C15', '#D9D9D9', '#6E6C80']
+        setColours(ivebeencheckingmyList, reallyDude)
     }
 
+
+}
+
+function setColours(ivebeencheckingmyList, reallyDude){
     colourDic = {
         "Bg": ivebeencheckingmyList[0],
         "BgOpp": ivebeencheckingmyList[1],
@@ -111,6 +138,8 @@ function changecolour(reallyDude){
         "AccentMute": ivebeencheckingmyList[5],
         "BgAccentLoud": ivebeencheckingmyList[6]
     }
+    console.log(colourDic)
+
 
     $("body").get(0).style.setProperty('--clrBg', colourDic["Bg"]);
     $("body").get(0).style.setProperty('--clrBgOpp', colourDic["BgOpp"]);
@@ -123,5 +152,4 @@ function changecolour(reallyDude){
     if(reallyDude){
         location.reload()
     }
-
 }
