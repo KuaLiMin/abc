@@ -138,6 +138,10 @@ nav{
     color: var(--clrBg);
 }
 
+.dropdown-divider{
+    border-top: var(--BgAccentLoud);
+}
+
 
 /*Screens 1060px and below*/
 @media only screen and (max-width: 1060px) {
