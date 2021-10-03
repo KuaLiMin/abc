@@ -1,12 +1,12 @@
 /*variables*/
 :root {
-    --clrBg: #FFF; /*White*/
-    --clrBgOpp: #000; /*Black*/
+    --clrBg: #000; /*White*/
+    --clrBgOpp: #FFF; /*Black*/
     --clrBgAccent: #C4F3F3; /*Diamond*/
-    --clrStrong: #FFCE4C; /*Maize*/
-    --clrStrongFocus: #F99C15; /*Dark Tangerine*/
-    --clrBgAccentMute: #D9D9D9; /*Light Silver*/
-    --clrBgAccentLoud: #6E6C80; /*Old Lavender*/
+    --clrStrong: #F99C15; /*Maize*/
+    --clrStrongFocus: #FFCE4C; /*Dark Tangerine*/
+    --clrBgAccentMute: #6E6C80; /*Light Silver*/
+    --clrBgAccentLoud: #D9D9D9; /*Old Lavender*/
 }
 
 /* harder to download images*/
@@ -91,7 +91,7 @@ nav{
     background-color: var(--clrBg);
 }
 
-.nav-link, .nameLogo>span, .dangerous{
+.nav-link, .homeLink, .dangerous{
     font-family: 'Montserrat Alternates', sans-serif;
     letter-spacing: 0.35mm
 }
