@@ -138,7 +138,7 @@ function getFormAnswers(){
     
     answers = {}
     answers["name"] = $('input#matchName').val()
-    answers["age"] = parseInt($('input#matchAge').val())
+    answers["age"] =  (new Date()).getFullYear() - parseInt($('input#matchAge').val())
     answers["gen"] = $('select#genMatch').val()
     answers["concern"] = $('select#concern').val()
     answers["budget"] = $('select#budget').val()

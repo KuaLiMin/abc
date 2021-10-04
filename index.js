@@ -11,7 +11,6 @@ $(document).ready(function() {
           var bottom_of_window = $(window).scrollTop() + $(window).height();
           
           if( bottom_of_window > bottom_of_element ){
-          console.log("a")
           $(this).animate({'opacity':'1'},500);
           }
           
@@ -41,7 +40,6 @@ let nums = new Set();
 
 // reload when button to email is clicked
 $(document).on('click', '#downArrow', function(){
-  console.log('a')
   $('html, body').animate({
     scrollTop: $("#downArrow").offset().top
 }, 500);

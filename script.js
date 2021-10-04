@@ -5,11 +5,14 @@ lsCheck()
 function lsCheck() {
     if (!(localStorage.hasOwnProperty("theme"))) {
         localStorage.theme = 0
+        addTop();
         changecolour(false);
     } else {
         theme = localStorage.getItem("theme")
         if (!(/^\d+$/.test(theme) && theme.length > 0)) {
             localStorage.theme = 0
+            addTop();
+            changecolour(false);
         } else {
             addTop();
             changecolour(false);
@@ -36,7 +39,7 @@ function addTop() {
     <div class="d-flex navbar-brand m-0 col-10 d-sm-none">
     <button class="bg-transparent theLogo mb-1 pr-2 col-3"><img src="media/logo/main.png" style="object-fit: contain; max-width: 100%;" alt="logo"></button>
     <a class="p-0 my-auto homeLink col-7" href="index.html">Hanabi.co</a></div>
-    <button class="navbar-toggler p-0 mb-2 col-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"> <img class="my-auto aSVG p-0" src="media/icon/menudot.svg" style="max-height:30px" alt="logo"> </button> <div class="collapse navbar-collapse p-0" id="navbarScroll"> <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll col-12 d-flex justify-content-between" style="--bs-scroll-height: 100px;"> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="indexhtml" href="index.html">Home</a> </li> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="therapyhtml" href="therapy.html">Therapy</a> </li> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="shophtml" href="shop.html">Shop</a> </li> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="contacthtml" href="contact.html">Contact</a> </li> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Other </a> <ul class="dropdown-menu navDrop py-lg-2 p-0" aria-labelledby="navbarScrollingDropdown"> <li><a class="nav-link dropdown-item" id="abouthtml" href="about.html">About</a></li> <li><hr class="nav-link dropdown-divider py-lg-2 p-0 my-1"></li> <li><a class="nav-link dropdown-item" id="hiringhtml" href="hiring.html">We\'re Hiring</a></li> <li><hr class="nav-link dropdown-divider py-lg-2 p-0 my-1"></li> <li><a class="nav-link dropdown-item" id="faqhtml" href="faq.html">FAQ</a></li><li><hr class="nav-link dropdown-divider py-lg-2 p-0 my-1"></li> <li><a class="nav-link dropdown-item" id="tchtml" href="tc.html">T&C</a></li> </ul> </li> </div> </div> </nav>`).insertBefore("main");
+    <button class="navbar-toggler p-0 mb-2 col-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"> <img class="my-auto aSVG p-0" src="media/icon/menudot.svg" style="max-height:30px" alt="logo"> </button> <div class="collapse navbar-collapse p-0" id="navbarScroll"> <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll col-12 d-flex justify-content-between" style="--bs-scroll-height: 100px;"> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="indexhtml" href="index.html">Home</a> </li> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="therapyhtml" href="therapy.html">Therapy</a> </li> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="shophtml" href="shop.html">Shop</a> </li> <li class="nav-item"> <a class="nav-link active" aria-current="page" id="contacthtml" href="contact.html">Contact</a> </li> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> About </a> <ul class="dropdown-menu navDrop py-lg-2 p-0" aria-labelledby="navbarScrollingDropdown"> <li><a class="nav-link dropdown-item" id="abouthtml" href="about.html">About</a></li> <li><hr class="nav-link dropdown-divider py-lg-2 p-0 my-1"></li> <li><a class="nav-link dropdown-item" id="hiringhtml" href="hiring.html">We\'re Hiring</a></li> <li><hr class="nav-link dropdown-divider py-lg-2 p-0 my-1"></li> <li><a class="nav-link dropdown-item" id="faqhtml" href="faq.html">FAQ</a></li><li><hr class="nav-link dropdown-divider py-lg-2 p-0 my-1"></li> <li><a class="nav-link dropdown-item" id="tchtml" href="tc.html">T&C</a></li> </ul> </li> </div> </div> </nav>`).insertBefore("main");
 
     /*colour correct item*/
     var page = $('main').attr('id');
@@ -79,7 +82,6 @@ $(document).on('click', '.theLogo', function(e){
 
 function changecolour(reallyDude){
     if(reallyDude){
-        console.log(Math.floor(Math.random() * numColour))
         localStorage.theme = Math.floor(Math.random() * numColour)
     }
     if(localStorage.theme == '1'){ /* dark mode*/
@@ -192,7 +194,6 @@ function setColours(ivebeencheckingmyList, reallyDude){
         "AccentMute": ivebeencheckingmyList[5],
         "AccentLoud": ivebeencheckingmyList[6]
     }
-    console.log(colourDic)
 
 
     $("body").get(0).style.setProperty('--clrBg', colourDic["Bg"]);
